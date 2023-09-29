@@ -10,11 +10,21 @@ function convertToRoman(num) {
     };
 
   //your code here
+	  let romanNumeral = "";
+
+  for (let i = 0; i < romanSymbols.length; i++) {
+    while (num >= romanSymbols[i][1]) {
+      romanNumeral += romanSymbols[i][0];
+      num -= romanSymbols[i][1];
+    }
+  }
+
+  return romanNumeral;
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
+console.log(convertToRoman(36));
 
 
 
